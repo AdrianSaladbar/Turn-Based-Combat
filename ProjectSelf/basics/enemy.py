@@ -10,10 +10,10 @@ class Enemy:
     def take_damage(self, damage):
         actual_damage = max(0, damage - self.defense)
         self.hp = max(0, self.hp - actual_damage)
-        print(f"{self.name} took {actual_damage} damage! Remaining HP: {self.hp}")
+        print(f"{self.name} took {actual_damage} damage! Remaining HP: {self.hp}\n")
 
     def attack_enemy(self,other):
-        print(f"{self.name} attacks {other.name}!")
+        print(f"{self.name} attacks {other.name}!\n")
         other.take_damage(self.attack)
     
     def is_alive(self):
@@ -21,8 +21,8 @@ class Enemy:
 
     def __str__(self):
         return (f"{self.name} Stats:\n"
-                f"HP: {self.hp}\n"
-                f"DEF: {self.defense}\n"
-                f"ATK: {self.attack}\n"
-                f"MANA: {self.mana}\n"
-                f"SPD: {self.speed}")
+                f" HP: {self.hp}\n"
+                f" DEF: {self.defense}\n"
+                f" ATK: {self.attack}\n"
+                f" MANA: {self.mana}\n"
+                f" SPD: {self.speed}\n")

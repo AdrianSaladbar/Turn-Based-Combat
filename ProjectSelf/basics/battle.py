@@ -5,6 +5,7 @@ class Battle:
         self.enemies = enemy_team
         self.all_combatants = [self.solo] + self.enemies
         self.all_combatants.sort(key=lambda e: e.speed, reverse=True)
+        
     def get_player_target_choice(self):
         living_enemies = [e for e in self.enemies if e.is_alive()]
         print("\nChoose your target:")

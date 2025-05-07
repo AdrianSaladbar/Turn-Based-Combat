@@ -137,13 +137,13 @@ class Character:
     
     # Battle Functions
     def attack_enemy(self,other):
-        print(f"{self.name} attacks {other.name}!")
+        print(f"{self.name} attacks {other.name}!\n")
         other.take_damage(self.atk + self.tatk)
         
     def take_damage(self, damage):
         actual_damage = max(0, damage - (self.defense + self.tdefense))
         self.acthp = max(0, self.acthp - actual_damage)
-        print(f"{self.name} took {actual_damage} damage! Remaining HP: {self.hp}")
+        print(f"{self.name} took {actual_damage} damage! Remaining HP: {self.acthp}\n")
         
     def is_alive(self):
         return self.acthp > 0
